@@ -1,8 +1,8 @@
 {
-  "name": "feathers-swagger",
+  "name": "feathers-swagger-fork",
   "description": "Add documentation to your Featherjs services and feed them to Swagger UI.",
   "version": "0.5.1",
-  "homepage": "https://github.com/feathersjs/feathers-swagger",
+  "homepage": "https://github.com/paul42/feathers-swagger",
   "main": "lib/",
   "keywords": [
     "feathers",
@@ -20,18 +20,17 @@
   },
   "contributors": [],
   "bugs": {
-    "url": "https://github.com/feathersjs/feathers-swagger/issues"
+    "url": "https://github.com/paul42/feathers-swagger/issues"
   },
   "engines": {
-    "node": ">= 4.6.0"
+    "node": ">= 8.1.1"
   },
   "scripts": {
     "prepublish": "npm run compile",
-    "publish": "git push origin --tags && npm run changelog && git push origin",
+    "publish": "git push origin --tags",
     "release:patch": "npm version patch && npm publish",
     "release:minor": "npm version minor && npm publish",
     "release:major": "npm version major && npm publish",
-    "changelog": "github_changelog_generator && git add CHANGELOG.md && git commit -am \"Updating changelog\"",
     "compile": "rimraf lib/ && babel -d lib/ src/",
     "watch": "babel --watch -d lib/ src/",
     "lint": "semistandard src/**/*.js test/**/*.js --fix",
